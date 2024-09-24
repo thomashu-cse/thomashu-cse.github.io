@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hubbard HomePage</title>
+    <style>
+
+        body {
+            background-color: rgb(51, 52, 60); /* dark grey background */
+            margin: 0; /* removes default body margin */
+        }
+
+        /* nav bar style */
+        .navbar {
+            background-color: rgb(23, 23, 23); /* dark grey background */
+            overflow: hidden; /* clears excess navbar */
+            display: flex; /* establishes flex */
+            align-items: center; /* centers elements */
+            justify-content: space-between; /* spaces elements */
+            padding: 0 20px; /* spaces navbar elements from viewport edges */
+            z-index: 2;
+        }
+
+        /* navbar links style */
+        .navbar a {
+            color: rgb(123, 237, 74); /* light green links */
+            text-align: center; /* centers text in link elements */
+            padding: 20px; /* link text spacing */
+            text-decoration: none; /* no link underlines(eww) */
+            font-size: 20px; /* link font size */
+        }
+
+        /* navbar hovered links color change */
+        .navbar a:hover {
+            background-color: rgb(214, 214, 214); /* light grey hover color */
+            color: rgb(0, 0, 0); /* dark grey for text within hover color */
+        }
+
+        /* style for title in navbar */
+        .navbar h2 {
+            color: rgb(234, 234, 234); /* light grey for navbar title */
+            margin: 0; /* removes default margin */
+            padding: 0 20px; /* adds spacing equal to link elements */
+        }
+
+        /* fills viewport width with image */
+        .resizing-img {
+            width: 100%; /* adjusts image width to fill */
+        }
+
+        /* text box container */
+        .text-box-container {
+            display: flex; /* flexbox */
+            justify-content: space-around; /* space between boxes */
+            margin: 20px 0; /* vertical margins */
+            padding: 0 20px; /* horizontal padding */
+        }
+
+        /* individual text box style */
+        .text-box {
+            background-color: rgb(199, 199, 199); /* light grey background */
+            color: black; /* black text */
+            padding: 20px; /* interior spacing */
+            border-radius: 8px; /* rounds corners */
+            width: 40%; /* width of boxes */
+        }
+
+    </style>
+
+    <script>
+
+        function calculateDays() {
+            const startDate = new Date('2024-09-22');
+            const today = new Date();
+            
+            const timeDifference = today - startDate;
+            const daysDifference = Math.floor(timeDifference / 86400000);
+
+            document.getElementById('days').innerText = daysDifference;
+    }
+
+    </script>
+
+</head>
+<body onload="calculateDays()">
+
+    <!-- nav bar -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="education.html">Education</a>
+
+        <h2>Thomas Hubbard's Portfolio</h2>
+
+        <a href="aboutme.html">About Me</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- banner image -->
+    <img src="https://lh3.googleusercontent.com/d/1pDF9ksv4dQq8nNN6VUC1B9SpgNGkBfbH" alt="snowboarding image" class="resizing-img">
+
+    <!-- text boxes side by side -->
+    <div class="text-box-container">
+
+        <div class="text-box">
+            <h2>Site Description</h2>
+            <p>Welcome to my portolio site! I started this site <b><span id='days'></span></b> days ago, and it's currently a WIP. I am very thankful for your time, and I hope to have the site completed by Monday the 30th of this September. I still have a lot of CSS to learn but so far it has been a fun endeavor. Otherwise, my <a href="https://www.linkedin.com/in/thomas-hubbard-41bbab322">LinkedIn</a> has a lot of my strictly professional information in the meantime!</p>
+        </div>
+
+        <div class="text-box">
+            <h2>Changelog</h2>
+            <h4>9/22/24</h4>
+            <p>      Started project. Navbar created.</p>
+            <h4>9/23/24</h4>
+            <p>      Added banner image.</p>
+            <h4>9/24/24</h4>
+            <p>      Added text boxes and days scipt.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
