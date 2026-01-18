@@ -10,37 +10,39 @@
             margin: 0; /* removes default body margin */
         }
 
-        /* nav bar style */
-        .navbar {
-            background-color: rgb(23, 23, 23); /* dark grey background */
-            overflow: hidden; /* clears excess navbar */
-            display: flex; /* establishes flex */
-            align-items: center; /* centers elements */
-            justify-content: space-between; /* spaces elements */
-            padding: 0 20px; /* spaces navbar elements from viewport edges */
-            z-index: 2;
+        /* title bar */
+        .titlebar {
+            background-color: rgb(23, 23, 23);
+            padding: 20px 0;
+            text-align: center;
         }
 
-        /* navbar links style */
-        .navbar a {
-            color: rgb(123, 237, 74); /* light green links */
-            text-align: center; /* centers text in link elements */
-            padding: 20px; /* link text spacing */
-            text-decoration: none; /* no link underlines(eww) */
-            font-size: 20px; /* link font size */
+        .titlebar h2 {
+            color: rgb(234, 234, 234);
+            margin: 0;
+            padding: 0 20px;
         }
 
-        /* navbar hovered links color change */
-        .navbar a:hover {
-            background-color: rgb(214, 214, 214); /* light grey hover color */
-            color: rgb(0, 0, 0); /* dark grey for text within hover color */
+        /* nav bar BELOW title */
+        .navlinks {
+            background-color: rgb(23, 23, 23);
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 15px 0;
         }
 
-        /* style for title in navbar */
-        .navbar h2 {
-            color: rgb(234, 234, 234); /* light grey for navbar title */
-            margin: 0; /* removes default margin */
-            padding: 0 20px; /* adds spacing equal to link elements */
+        .navlinks a {
+            color: rgb(123, 237, 74);
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .navlinks a:hover {
+            background-color: rgb(214, 214, 214);
+            color: rgb(0, 0, 0);
         }
 
         /* fills viewport width with image */
@@ -77,20 +79,22 @@
             const daysDifference = Math.floor(timeDifference / 86400000);
 
             document.getElementById('days').innerText = daysDifference;
-    }
+        }
 
     </script>
 
 </head>
 <body onload="calculateDays()">
 
-    <!-- nav bar -->
-    <div class="navbar">
+    <!-- title bar -->
+    <div class="titlebar">
+        <h2>Thomas Hubbard's Portfolio</h2>
+    </div>
+
+    <!-- nav bar BELOW title -->
+    <div class="navlinks">
         <a href="home.html">Home</a>
         <a href="education.html">Education</a>
-
-        <h2>Thomas Hubbard's Portfolio</h2>
-
         <a href="aboutme.html">About Me</a>
         <a href="contact.html">Contact</a>
     </div>
