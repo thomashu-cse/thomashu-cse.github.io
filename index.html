@@ -8,6 +8,9 @@
         body {
             background-color: rgb(51, 52, 60); /* dark grey background */
             margin: 0; /* removes default body margin */
+            min-height: 100vh; /* ensures full height */
+            display: flex;
+            flex-direction: column; /* allows footer to stick */
         }
 
         /* title bar */
@@ -67,12 +70,22 @@
             width: 40%; /* width of boxes */
         }
 
+        /* footer bar (sticky) */
+        .footerbar {
+            background-color: rgb(23, 23, 23);
+            color: rgb(234, 234, 234);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+            margin-top: auto; /* pushes footer to bottom */
+        }
+
     </style>
 
     <script>
 
         function calculateDays() {
-            const startDate = new Date('2026-01-17');
+            const startDate = new Date('2026-01-16');
             const today = new Date();
             
             const timeDifference = today - startDate;
@@ -94,7 +107,7 @@
     <!-- nav bar BELOW title -->
     <div class="navlinks">
         <a href="home.html">Home</a>
-        <a href="education.html">Education & Certification</a>
+        <a href="education.html">Education</a>
         <a href="aboutme.html">About Me</a>
         <a href="contact.html">Contact</a>
     </div>
@@ -107,7 +120,7 @@
 
         <div class="text-box">
             <h2>Site Description</h2>
-            <p>Welcome to my portolio website! I restarted my development and maintenance of this site <b><span id='days'></span></b> days ago, and it's currently still a WIP. I am very thankful for your time, and I hope you can learn more about me here. You can think of this as a personal supplement to my resume, and example of some webdev skills. Otherwise, my <a href="https://www.linkedin.com/in/thomas-hubbard-41bbab322">LinkedIn</a> is also available, but its private so please add me as a connection for access. Thanks and welcome!</p>
+            <p>Welcome to my portolio website! You can think of this as a personal introduction to supplement my resume, and example of some webdev skills. I hope you can learn more about who I am here, and hopefully you find some things interesting. Intro aside, I restarted my development and maintenance of this site <b><span id='days'></span></b> days ago, and it's currently still a WIP. I enjoy working with HTML for sites like this, and if you have any ideas for a company or personal website of your own you would like me to aid with I am more than willing to do so! Otherwise, my <a href="https://www.linkedin.com/in/thomas-hubbard-41bbab322">LinkedIn</a> is also available, but I keep it private so please add me as a connection for access. Thanks and welcome!</p>
         </div>
 
         <div class="text-box">
@@ -120,6 +133,11 @@
             <p>      Added text boxes and days scipt.</p>
         </div>
 
+    </div>
+
+    <!-- sticky footer bar -->
+    <div class="footerbar">
+        Columbus, Ohio 43212 | (330)-604-2630 | thomashu.cse@gmail.com
     </div>
 
 </body>
